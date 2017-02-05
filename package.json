@@ -1,0 +1,22 @@
+{
+  "name": "vuejs-tutorial",
+  "version": "1.0.0",
+  "description": "vue.js tutorial from laracast and udemy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gajayana/vuejs-tutorial.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gajayana/vuejs-tutorial/issues"
+  },
+  "homepage": "https://github.com/gajayana/vuejs-tutorial#readme",
+  "dependencies": {
+    "vue": "^2.1.10"
+  }
+}

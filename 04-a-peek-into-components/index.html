@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>A Peek Into Components</title>
+    
+</head>
+<body>
+    <div id="app">
+        
+        <counter subject="Likes"></counter>
+        <counter subject="Dislikes"></counter>
+         
+        <template id="counter-template">
+            <h1>{{ subject }}</h1>
+            <button @click="doCount">{{ count }}</button>
+        </template>
+        
+    </div>
+    
+    <script type="text/javascript" src="vendors/vue/vue.js"></script>
+    
+    <script>
+        /*global Vue*/
+        'use strict';
+        
+        // start: use global components
+        // Vue.component('counter', {
+        //     template: '#counter-template',
+        //     data : function () {
+        //         return { count : 0 };
+        //     },
+        //     props : ['subject'],
+        //     methods: {
+        //         doCount : function () {
+        //             this.count++;
+        //         }
+        //     }
+        // });
+        
+        // new Vue({
+        //     el: '#app'
+            
+        // });
+        
+        // end: use global components
+        
+        // start: use local components
+        new Vue({
+            el: '#app',
+            components : {
+                counter : {
+                    template: '#counter-template',
+                    data : function () {
+                        return { count : 0 };
+                    },
+                    props : ['subject'],
+                    methods: {
+                        doCount : function () {
+                            this.count++;
+                        }
+                    }
+                }
+            }
+            
+        });
+        // end: use local components
+    </script>
+</body>
+</html>

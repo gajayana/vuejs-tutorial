@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Handling</title>
+    
+</head>
+<body>
+    <div id="app">
+        
+        <form action="done.html" v-on:submit.prevent='handleIt'>
+            <button type="submit">Submit</button>
+            
+        </form>
+        <br>
+        <button @click="updateCount">Increment Counter: {{ count }}</button>
+        
+        <button @click="count++">Increment Counter: {{ count }}</button>
+    </div>
+    
+    <script type="text/javascript" src="vendors/vue/vue.min.js"></script>
+    
+    <script>
+        /*global Vue*/
+        'use strict';
+        
+        new Vue({
+            el: '#app',
+            methods : {
+                handleIt : function () {
+                    
+                    console.log('handled');
+                },
+                updateCount : function () {
+                    this.count++;
+                }
+            },
+            data : {
+                count : 0
+            }
+                    
+        });
+    </script>
+</body>
+</html>

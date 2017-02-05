@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue Show</title>
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+</head>
+<body>
+    <div id="app">
+        
+        <form>
+            <span class="error" v-show="!message">Yuo must enter a message</span>
+            
+            <br>
+            
+            <textarea v-model="message"></textarea>
+            
+            <br>
+            
+            <button type="submit" v-show="message">Send Message</button>
+        </form>
+        
+        <pre>
+            {{ $data | json }}
+        </pre>
+        
+    </div>
+    
+    <script type="text/javascript" src="vendors/vue/vue.min.js"></script>
+    
+    <script>
+        /*global Vue*/
+        'use strict';
+        
+        new Vue({
+            el: '#app',
+            data : {
+                message: ''
+            }
+        });
+    </script>
+</body>
+</html>

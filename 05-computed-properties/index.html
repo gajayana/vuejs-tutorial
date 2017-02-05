@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Computed Properties</title>
+    
+</head>
+<body>
+    <h1>{{ fullName }}</h1>
+    <input type="text" v-model="first">
+    <input type="text" v-model="last">
+    
+    <script type="text/javascript" src="vendors/vue/vue.js"></script>
+    
+    <script>
+        /*global Vue*/
+        'use strict';
+        
+        new Vue({
+            el: 'body',
+            data: {
+                first: 'jefri',
+                last: 'berli'
+            },
+            computed : {
+                fullName : function () {
+                    return this.first + ' ' + this.last;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
